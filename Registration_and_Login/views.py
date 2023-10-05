@@ -1,6 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import TemplateView,CreateView
+from .models import Auth_user
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Hello, world. you're at the Registration_and_Login index.")
+class RegistrationView(CreateView):
+    template_name = "sign_up.html"
+    fields = ['username', 'email', 'password']
+    
+
+class LoginView(TemplateView):
+    template_name = "login.html"
