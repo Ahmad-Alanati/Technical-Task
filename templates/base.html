@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Task</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="topnav">
             <div>
-                <a href="{% url 'home'%}">Home</a>
+                <a class="active" href="{% url 'home'%}">Home</a>
                 <a href="{% url 'about'%}">About</a>
             </div>
             {% if user.is_authenticated %}
