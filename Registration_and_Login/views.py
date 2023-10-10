@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from .forms import SignUpForm
 from django.shortcuts import redirect
 from django.contrib.auth import login
+from django.contrib.auth.forms import AuthenticationForm
 
 
 # Create your views here.
@@ -27,6 +28,10 @@ class RegistrationView(CreateView):
 class CustomLoginView(LoginView):
     template_name = "login.html"
     success_url = reverse_lazy('home')
+    authentication_form = AuthenticationForm
     
 class HomeView(TemplateView):
     template_name = "homepage.html"
+    
+class AboutView(TemplateView):
+    template_name = "about.html"
