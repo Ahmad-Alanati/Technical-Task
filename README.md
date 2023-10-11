@@ -2,9 +2,9 @@
 
 ## Technology used
 
-1. **Django**: Django is a open source web framework, it is a Python-based web framework that follows the MTV (Model-Template-Views) architectural pattern, a lot of the needed things are built in so all you need to do is call them for example the admin page is ready from the start, the user table is built in too.
+1. **Django**: Django is an open-source web framework, it is a Python-based web framework that follows the MTV (Model-Template-Views) architectural pattern, a lot of the needed things are built in so all you need to do is call them for example the admin page is ready from the start, the user table is built in too.
 
-2. **PostgreSQL**: PostgreSQL is open-source RDBMS (relational database management system), PostgreSQL is more scalable then SQLite so the system can handle more user data, it is more reliable and durable the SQLite.
+2. **PostgreSQL**: PostgreSQL is an open-source RDBMS (relational database management system), PostgreSQL is more scalable than SQLite so the system can handle more user data, it is more reliable and durable than SQLite.
 
 ## Classes
 
@@ -16,13 +16,13 @@
     - **Form**: `SignUpForm`
     - **Success Redirect**: After successful registration, it will send the user to the login page.
     - **Functions**:
-        - form_valid: It checks if the provided email already exists in the database. If it does, it adds an error message to the form. Upon successful registration, the user is logged in and redirected to the home page.
+        - form_valid: It checks if the provided email exists in the database. If it does, it adds an error message to the form. Upon successful registration, the user is logged in and redirected to the home page.
 
 2. CustomLoginView:
     - **Purpose**: This view provides a custom login page.
     - **Template**: `login.html`
     - **Form**: `SignUpForm`
-    - **Success Redirect**: After successful login, users are redirected to the home page.
+    - **Success Redirect**: Users are redirected to the home page after successful login.
     - **Authentication Form**: It uses Django's `AuthenticationForm` for user login.
 
 3. HomeView:
@@ -30,7 +30,7 @@
     - **Template**: `homepage.html`
 
 4. HomeView:
-    - **Purpose**: A basic template view for the about page.
+    - **Purpose**: A basic template view for the About page.
     - **Template**: `about.html`
 
 ### forms
@@ -68,7 +68,7 @@ All the endpoints in the application:
 
 #### option one: Django and PostgreSQL locally
 
-1. run this command to create the data base
+1. run this command to create the database
 ```bash
 psql -f DBSetup.sql
 ```
@@ -76,14 +76,14 @@ psql -f DBSetup.sql
 2. change the name of the .env.sample to .env and add the needed variable
 example:
 ```
-DB_NAME = Technical Task // this variable is fixed
-DB_USER = underknight //this is the database user
-DB_PASSWORD = 12345 // this is the password for the user
-DB_HOST = localhost // this is the database host
+DB_NAME = Technical Task // This variable is fixed
+DB_USER = underknight //This is the database user
+DB_PASSWORD = 12345 //This is the password for the user
+DB_HOST = localhost //This is the database host
 ```
-chage the DB_USER and DB_PASSWORD, DB_HOST to the local database info you have
+change the DB_USER and DB_PASSWORD, DB_HOST to the local database info you have
 
-3. run this command to apply all the base database for django
+3. run this command to create all the database tables for Django
 ```bash
 python manage.py migrate
 ```
@@ -93,7 +93,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-5. run this command to run the django server
+5. run this command to run the Django server
 ```bash
 python manage.py runserver
 ```
@@ -103,7 +103,7 @@ python manage.py runserver
 
 #### option two: docker
 
-1. change the name of the .env.sample to .env and copy the lines below and put them in the .env file
+1. change the name of the .env.sample to .env, then copy the lines below and put them in the .env file
 example:
 ```
 DB_NAME = postgres
@@ -116,9 +116,9 @@ DB_HOST = db
 ```bash
 docker-compose up --build
 ```
-note it will take sometime to finish
+note it will take some time to finish
 
-3. open a new terminal then run this command to apply all the base database for django
+3. open a new terminal then run this command to create all the database tables for Django
 ```bash
 docker-compose run web python manage.py migrate
 ```
