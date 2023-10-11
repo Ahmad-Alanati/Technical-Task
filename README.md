@@ -1,6 +1,10 @@
-# Technical-Task
-
 # Documentation
+
+## Technology used
+
+1. **Django**: Django is a open source web framework, it is a Python-based web framework that follows the MTV (Model-Template-Views) architectural pattern, a lot of the needed things are built in so all you need to do is call them for example the admin page is ready from the start, the user table is built in too.
+
+2. **PostgreSQL**: PostgreSQL is open-source RDBMS (relational database management system), PostgreSQL is more scalable then SQLite so the system can handle more user data, it is more reliable and durable the SQLite.
 
 ## Classes
 
