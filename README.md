@@ -66,7 +66,7 @@ All the endpoints in the application:
 
 ### how to run the app locally
 
-#### option one: locally 
+#### option one: Django and PostgreSQL locally
 
 1. run this command to create the data base
 ```bash
